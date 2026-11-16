@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --clinic-green: #2f6b4f;
+  --clinic-green-dark: #24513b;
+  --clinic-bg: #f6f8f7;
+}
+
+@theme {
+  --color-brand-50: #eef6f1;
+  --color-brand-100: #d6eadb;
+  --color-brand-600: #2f6b4f;
+  --color-brand-700: #24513b;
+}
+
+body {
+  background-color: var(--clinic-bg);
+  color: #1f2937;
+  font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Print styles: only the printable section is emitted. */
+@media print {
+  body * { visibility: hidden; }
+  #print-area, #print-area * { visibility: visible; }
+  #print-area { position: absolute; inset: 0; margin: 0; padding: 24px; }
+}
